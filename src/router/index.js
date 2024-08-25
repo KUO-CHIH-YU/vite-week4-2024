@@ -5,9 +5,10 @@ const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/home',
+      path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      redirect: '/week4'
     },
     {
       path: '/about',
@@ -18,7 +19,7 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '/',
+      path: '/week4',
       name: 'week4',
       component: () => import('../views/week4Login.vue')
     },

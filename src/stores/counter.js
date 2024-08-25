@@ -5,7 +5,7 @@ import { useRouter } from 'vue-router'
 
 export const userouter = defineStore('router', () => {
   const router = useRouter()
-
+  console.log(router.options.routes)
   function todoList() {
     router.push('/TodoList')
   }
