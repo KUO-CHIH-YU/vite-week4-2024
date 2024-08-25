@@ -1,0 +1,1 @@
+import{_ as t,c as a,l as s,F as c,a as e,o}from"./index-CFJcvoKQ.js";const n={},r=e("div",{class:"view"},[e("h1",null,"巢狀路由"),s(" vvv ")],-1);function _(l,v){return o(),a(c,null,[r,s(" vvv ")],64)}const i=t(n,[["render",_]]);export{i as default};
