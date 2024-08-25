@@ -1,1 +1,0 @@
-import{_ as e,c as s,o as t,a as c}from"./index-2-jo-swZ.js";const o={},_={class:"view"},n=c("h1",null,"巢狀路由 /內層",-1),a=[n];function r(i,d){return t(),s("div",_,a)}const f=e(o,[["render",r]]);export{f as default};
