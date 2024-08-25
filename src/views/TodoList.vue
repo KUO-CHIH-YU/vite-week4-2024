@@ -10,7 +10,8 @@
             <!-- <button @click="addtodobtn" type="button">addTodo</button> -->
           </a>
         </div>
-        <div class="todoList_list">
+        <div v-if="todosstatus === ''">目前尚無待辦事項</div>
+        <div v-else class="todoList_list">
           <ul class="todoList_tab">
             <li>
               <a
@@ -145,8 +146,11 @@ const getTodos = async () => {
 }
 
 const todosstatuschange = () => {
-  todosstatus.value = `${todos.value.filter((todo) => !todo.status).length} 個未完成項目，
-  ${todos.value.filter((todo) => todo.status).length} 個已完成項目`
+  if (todos.value.length === 0) {
+    todosstatus.value = ''
+  } else {
+    todosstatus.value = `${todos.value.filter((todo) => !todo.status).length} 個未完成項目`
+  }
 }
 
 const addtodobtn = async () => {
