@@ -37,7 +37,7 @@
           required
         />
         <button @click="singIn" class="formControls_btnSubmit" type="button">登入</button>
-        <a @click="tologinPage" class="formControls_btnLink" href="#">註冊帳號</a>
+        <a @click.prevent="tologinPage" class="formControls_btnLink" href="#">註冊帳號</a>
       </form>
     </div>
     <div v-else>
@@ -83,16 +83,10 @@
           required
         />
         <span>{{ pwderror }}</span>
-        <input
-          @click="singUp"
-          class="formControls_btnSubmit"
-          type="button"
-          onclick="javascript:location.href='#todoListPage'"
-          value="註冊帳號"
-        />
+        <input @click="singUp" class="formControls_btnSubmit" type="button" value="註冊帳號" />
         <!-- <button @click="singUp" type="button">註冊</button> -->
         <!-- <p>{{ messageSignUp }}</p> -->
-        <a @click="tologinPage" class="formControls_btnLink" href="#">登入</a>
+        <a @click.prevent="tologinPage" class="formControls_btnLink" href="#">登入</a>
       </form>
     </div>
   </div>

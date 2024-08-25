@@ -5,7 +5,7 @@
       <div class="todoList_Content">
         <div class="inputBox">
           <input v-model="addtodo" type="text" placeholder="請輸入待辦事項" />
-          <a @click="addtodobtn" href="#">
+          <a @click="addtodobtn" href="#" @click.prevent="handleClick">
             <i class="fa fa-plus"></i>
             <!-- <button @click="addtodobtn" type="button">addTodo</button> -->
           </a>
@@ -50,7 +50,7 @@
                   <span v-if="!todo.edit">{{ todo.content }}</span>
                   <input v-else :value="todo.content" @change="updateTodoEdit($event, todo.id)" />
                 </label>
-                <a href="#">
+                <a href="#" @click.prevent="handleClick">
                   <i
                     v-if="!todo.edit"
                     @click="editing(todo.id)"
@@ -58,7 +58,7 @@
                   ></i>
                   <i v-else @click="editing(todo.id)" class="fa-solid fa-check fa-2x"></i>
                 </a>
-                <a href="#">
+                <a href="#" @click.prevent="handleClick">
                   <i @click="del(todo.id)" class="fa fa-times fa-2x"></i>
                 </a>
               </li>
